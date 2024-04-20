@@ -1,0 +1,244 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html{
+    font-size: 0.625rem;
+    --Very-Dark-Magenta: hsl(300, 43%, 22%);
+    --Soft-Pink: hsl(333, 80%, 67%);
+    --Dark-Grayish-Magenta: hsl(303, 10%, 53%);
+    --Light-Grayish-Magenta: hsl(300, 24%, 96%);
+    --White: hsl(0, 0%, 100%);
+}
+
+body{
+    font-family: "League Spartan", sans-serif;
+    background-image: url(images/bg-pattern-top-desktop.svg), url(images/bg-pattern-bottom-desktop.svg);
+    background-position: top left, bottom right;
+    background-repeat: no-repeat;
+    background-size:min(35% 400px),  min(80%);
+
+
+}
+
+
+.hero-container{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    gap: 5rem;
+}
+
+.container{
+    max-width: 1100px;
+    margin: auto;
+    padding:8rem 3rem;
+}
+
+
+
+.header{
+display: flex;
+align-items: center;
+ justify-content: space-between;
+ gap: 3rem; 
+
+}
+
+.title h1{
+    font-size: 4.8rem;
+    font-weight: 700;
+}
+
+ p{
+    font-size: 1.5rem;
+    font-weight: 400;
+    line-height: 2rem;
+}
+
+.title{
+max-width:40%;
+}
+
+.title p{
+    padding-top: 2rem;  
+}
+
+.icon-group{
+    padding: 2rem 4rem;
+    background-color: hsl(303deg 10% 53% / 42%);;
+    margin-bottom: 2rem ;
+    border-radius: .8rem;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 2rem;  
+}
+
+
+.icon-group:nth-child(1){
+    transform: translateX(-90px);
+}
+.icon-group:nth-child(2){
+    transform: translateX(-50px);
+}
+
+.icon-group p{
+    font-weight: 700;
+    color: var(--Very-Dark-Magenta);
+}
+
+
+.hero-blog{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 3rem;
+}
+
+
+
+.hero-content img{
+    width: 50px;
+    height: 50px;
+    border-radius: 50px;
+}
+
+.hero-content {
+display: flex;
+flex-direction: column;
+gap: 2rem;
+background-color: var(--Very-Dark-Magenta);
+ box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+ border-radius: 1rem;
+ padding: 3rem;
+
+}
+
+.card{
+    display: flex;
+    gap: 2rem;
+}
+
+.author{
+    display: flex;
+    flex-direction: column;
+    gap: .5rem;
+}
+
+.author p:first-child{
+    color: var(--White);
+    font-weight: 500;
+}
+
+.hero-content p:last-child{
+    color: var(--White);
+}
+.author p:last-child{
+    color: var(--Soft-Pink);
+}
+
+.hero-content:nth-child(2){
+    transform: translatey(20px);
+}
+.hero-content:nth-child(3){
+    transform: translatey(40px);
+}
+
+
+
+  @media (max-width:780px){
+    .title h1{
+        font-size: 3.5rem;
+        font-weight: 700;
+    }
+
+    p{
+        font-size: 1.4rem;
+        font-weight: 400;
+        line-height: 1.6rem;
+    }
+
+    
+.icon-group{
+    padding: 1.4rem 1rem;
+    background-color: hsl(303deg 10% 53% / 42%);;
+    margin-bottom: 2rem ;
+    border-radius: .8rem;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 1rem;  
+}
+
+.icon-group:nth-child(1){
+    transform: translateX(-50px);
+}
+.icon-group:nth-child(2){
+    transform: translateX(-30px);
+}
+
+.icon-group img{
+    width: 10px;
+}
+
+  }
+
+  @media (max-width:600px) {
+    .hero-container{
+        padding: 5rem 2rem;
+        margin-bottom: 6rem;
+        gap: 2rem;
+    }
+    .header{
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+    }
+
+    .title {
+        max-width: 100%;
+        padding-bottom: 3rem;
+        text-align: center;
+    }
+
+    .title h1{
+        font-size: 4rem;
+        font-weight: 700;
+    }
+
+    .reviews {
+        width: 100%;
+    }
+    
+    .icon-group{
+        flex-direction: column;
+        gap: .8rem;
+      
+    }
+
+    .icon-group img{
+        width: 18px;
+    }
+    p{
+        font-size: 1.6rem;
+    }
+
+
+    .icon-group:nth-child(1) {
+        transform: unset;
+    }
+    .icon-group:nth-child(2) {
+        transform: unset;
+    }
+
+    .hero-blog{
+        grid-template-columns: 1fr;
+        gap: 1rem;
+    }
+
+  
+  
+    
+  }
